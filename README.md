@@ -1,1 +1,0 @@
-# ppc-aac-training
