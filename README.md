@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Cats</title>
+        <title>PPCAAC</title>
         <base href="https://cheng-slp.github.io/ppc-aac-training/">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
