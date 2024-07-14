@@ -15703,7 +15703,7 @@
                 consts: [["role", "banner", 1, "toolbar"], [2, "padding-left", "20px"], ["role", "main", 1, "content"], [2, "margin-top", "15px"], ["mat-stroked-button", "", 3, "click"], ["selectable", "true", "multiple", "true"], ["color", "primary", 3, "selected", "disabled", "click", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["color", "primary", 3, "selected", "disabled", "click"], [2, "font-size", "20px"]],
                 template: function(t, r) {
                     1 & t && (re(0, "div", 0)(1, "span", 1),
-                    Ne(2, "CATS Model - Assessments and test"),
+                    Ne(2, "Communication Assessment and Feature Matching Filter"),
                     ie()(),
                     re(3, "div", 2)(4, "h3"),
                     Ne(5, "Instructions"),
