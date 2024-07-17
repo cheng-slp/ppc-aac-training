@@ -15448,6 +15448,25 @@
                 dr(t)
             }
         }
+        function tB(n, e) {
+            if (1 & n) {
+                const t = Ur();
+                re(0, "mat-chip", 8),
+                De("click", function() {
+                    const o = Rr(t).$implicit;
+                    return xr(St().toggleSkill(o))
+                }),
+                Ne(1),
+                ie()
+            }
+            if (2 & n) {
+                const t = e.$implicit
+                  , r = St();
+                ot("selected", r.selectedSkills.has(t))("disabled", !r.remainingSkills.has(t)),
+                Ye(1),
+                dr(t)
+            }
+        }
         function dB(n, e) {
             if (1 & n && (ja(0)(1),
             re(2, "li", 9),
@@ -15474,6 +15493,7 @@
             n.PROTEST = "Protest",
             n.REQUESTING_MORE = "Requesting More of Something",
             n.REQUESTING_NEW = "Requesting Something New",
+            n.SENSORY_TEST = "SENSORY TEST",
             _;
             var n
         }
@@ -15492,6 +15512,7 @@
             n.SIMPLE_GESTURES = "Simple Gestures",
             n.USING_ECHOLALIA = "Using Echolalia",
             n.USING_LANGUAGE = "Using Language",
+            n.COGNITION_TEST = "COGNITION TEST",
             m;
             var n
         }
@@ -15508,6 +15529,7 @@
             n.SUPPORTING_USE_OF_OBJECTS_MATERIALS = "Supporting Use of Objects/Materials",
             n.TEACHERS_PARTICIPATION_IN_ACTIVITY = "Teacher's Participation in Activity",
             n.TRANSITIONING_FROM_ACTIVITY_TO_ANOTHER = "Transitioning from 1 Activity to Another",
+            n.MOTOR_TEST = "MOTOR TEST",
             I;
             var n
         }
@@ -15525,6 +15547,7 @@
             n.PROMPTING = "Prompting",
             n.PROVIDING_SPOKEN_WRITTEN_DIRECTIONS = "Providing Spoken and Written Directions",
             n.TEACHER_TEACHER_INTERACTIONS = "Teacher-to-Teacher Interactions",
+            n.SPEECH_TEST = "SPEECH TEST",
             O;
             var n
         }
@@ -15535,6 +15558,7 @@
             n.MATERIALS_USED = "Materials Used",
             n.OPPORTUNITIES_USE_MATERIALS = "Opportunities to Use Materials",
             n.PHYSICAL_SPACE = "Physical Space",
+            n.LANGUAGE_TEST = "LANGUAGE TEST",
             k;
             var n
         }
@@ -15545,7 +15569,15 @@
             n.COMMUNICATION_OPPORTUNITIES = "Communication Opportunities",
             n.STUDENT_STUDENT_INTERACTIONS = "Student-to-Student Interactions",
             n.TEACHER_TEACHER_INTERACTIONS = "Communication Partner Interactions",
+            n.LITERACY_TEST = "LITERACY TEST",
             $;
+            var n
+        }
+        )()
+            , tt = (()=>{
+            return (n = $ || ($ = {})).ADULT_STUDENT_INTERACTIONS = "Adult-to-Student Interactions",
+            n.CARE_GIVER_TEST = "CARE GIVER TEST",
+            tt;
             var n
         }
         )();
@@ -15652,12 +15684,13 @@
         let fB = (()=>{
             class n {
                 constructor() {
-                    this.CommunicationFunctions = Object.values(_),
-                    this.CommunicationModalities = Object.values(m),
-                    this.GlobalInteraction = Object.values(I),
-                    this.DiscreteInstructional = Object.values(O),
-                    this.PhysicalEnvironment = Object.values(k),
-                    this.SocialEnvironment = Object.values($),
+                    this.Sensory = Object.values(_),
+                    this.Cognition = Object.values(m),
+                    this.Motor = Object.values(I),
+                    this.Speech = Object.values(O),
+                    this.Language = Object.values(k),
+                    this.Literacy = Object.values($),
+                    this.CareGiver = Object.values(tt),
                     this.assessments = hB,
                     this.selectedSkills = new Set,
                     this.remainingSkills = new Set,
@@ -15727,25 +15760,25 @@
                     Ne(16, "Cognition"),
                     ie(),
                     re(17, "mat-chip-list", 5),
-                    cr(18, aB, 2, 3, "mat-chip", 6),
+                    cr(18, sB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(19, "h2"),
                     Ne(20, "Motor"),
                     ie(),
                     re(21, "mat-chip-list", 5),
-                    cr(22, lB, 2, 3, "mat-chip", 6),
+                    cr(22, aB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(23, "h2"),
                     Ne(24, "Speech"),
                     ie(),
                     re(25, "mat-chip-list", 5),
-                    cr(26, uB, 2, 3, "mat-chip", 6),
+                    cr(26, lB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(27, "h2"),
                     Ne(28, "Language"),
                     ie(),
                     re(29, "mat-chip-list", 5),
-                    cr(30, cB, 2, 3, "mat-chip", 6),
+                    cr(30, uB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(31, "h2"),
                     Ne(32, "Literacy"),
@@ -15757,7 +15790,7 @@
                     Ne(36, "Care Giver"),
                     ie(),
                     re(37, "mat-chip-list", 5),
-                    cr(38, cB, 2, 3, "mat-chip", 6),
+                    cr(38, tB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(39, "h2"),
                     Ne(40, "Matching AAC Assessments"),
@@ -15767,19 +15800,19 @@
                     ie()(),
                     Qo(43, "router-outlet")),
                     2 & t && (Ye(16),
-                    ot("ngForOf", r.CommunicationFunctions),
+                    ot("ngForOf", r.Sensory),
                     Ye(4),
-                    ot("ngForOf", r.CommunicationModalities),
+                    ot("ngForOf", r.Cognition),
                     Ye(6),
-                    ot("ngForOf", r.GlobalInteraction),
+                    ot("ngForOf", r.Motor),
                     Ye(4),
-                    ot("ngForOf", r.DiscreteInstructional),
+                    ot("ngForOf", r.Speech),
                     Ye(6),
-                    ot("ngForOf", r.PhysicalEnvironment),
+                    ot("ngForOf", r.Language),
                     Ye(4),
-                    ot("ngForOf", r.SocialEnvironment),
+                    ot("ngForOf", r.Literacy),
                     Ye(4),
-                    ot("ngForOf", r.SocialEnvironment),
+                    ot("ngForOf", r.CareGiver),
                     Ye(4),
                     ot("ngForOf", r.assessments))
                 },
