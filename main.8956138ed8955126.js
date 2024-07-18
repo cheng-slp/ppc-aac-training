@@ -15731,8 +15731,8 @@
             n.\u0275cmp = li({
                 type: n,
                 selectors: [["app-root"]],
-                decls: 46,
-                vars: 7,
+                decls: 48,
+                vars: 8,
                 consts: [["role", "banner", 1, "toolbar"], [2, "padding-left", "20px"], ["role", "main", 1, "content"], [2, "margin-top", "15px"], ["mat-stroked-button", "", 3, "click"], ["selectable", "true", "multiple", "true"], ["color", "primary", 3, "selected", "disabled", "click", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["color", "primary", 3, "selected", "disabled", "click"], [2, "font-size", "20px"]],
                 template: function(t, r) {
                     1 & t && (re(0, "div", 0)(1, "span", 1),
@@ -15810,7 +15810,7 @@
                     ot("ngForOf", r.Motor),
                     Ye(4),
                     ot("ngForOf", r.Speech),
-                    Ye(6),
+                    Ye(4),
                     ot("ngForOf", r.Language),
                     Ye(4),
                     ot("ngForOf", r.Literacy),
