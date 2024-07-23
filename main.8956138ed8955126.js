@@ -15448,6 +15448,25 @@
                 dr(t)
             }
         }
+        function vB(n, e) {
+            if (1 & n) {
+                const t = Ur();
+                re(0, "mat-chip", 8),
+                De("click", function() {
+                    const o = Rr(t).$implicit;
+                    return xr(St().toggleSkill(o))
+                }),
+                Ne(1),
+                ie()
+            }
+            if (2 & n) {
+                const t = e.$implicit
+                  , r = St();
+                ot("selected", r.selectedSkills.has(t))("disabled", !r.remainingSkills.has(t)),
+                Ye(1),
+                dr(t)
+            }
+        }
         function dB(n, e) {
             if (1 & n && (ja(0)(1),
             re(2, "li", 9),
@@ -15554,7 +15573,14 @@
             $;
             var n
         }
-        )();
+        )()
+            , v = (()=>{
+            return (n = v || (v = {})).GENERAL_INTERACTIONS = "General Interactions",
+            n.GENERAL_OPPORTUNITIES = "General Opportunities",
+            n.GENERAL_TEST = "GENERAL TEST",
+            v;
+            var n
+        };
         const hB = [{
             name: "Communication Complexity Scale",
             studentCommunicationSkills: new Set([_.PROTEST, _.REQUESTING_MORE, _.REQUESTING_NEW, _.ANSWERING_QUESTIONS, _.PARTICIPATING_SOCIAL_INTERACTIONS, _.JOINT_ATTENTION, _.BEHAVIOR_REGULATION, m.EARLY_SOUNDS, m.BODY_MOVEMENTS, m.FACIAL_EXPRESSIONS, m.LOOKING_AT_SOMEONE_SOMETHING, m.SIMPLE_GESTURES, m.CONVENTIONAL_GESTURES, m.CONVENTIONAL_VOCALIZATIONS, m.CONCRETE_SYMBOLS, m.ABSTRACT_SYMBOLS, m.USING_LANGUAGE, m.ACTIVATING_SWITCH, m.USING_ECHOLALIA])
@@ -15657,6 +15683,9 @@
         }, {
             name: "test result",
             studentCommunicationSkills: new Set([_.SENSORY_TEST, m.COGNITION_TEST, I.MOTOR_TEST, O.SPEECH_TEST, k.LANGUAGE_TEST, $.LITERACY_TEST])
+        }, {
+            name: "general result",
+            studentCommunicationSkills: new Set([v.GENERAL_INTERACTIONS, v.GENERAL_OPPORTUNITIES, v.GENERAL_TEST])
         }];
         let fB = (()=>{
             class n {
@@ -15667,6 +15696,7 @@
                     this.Speech = Object.values(O),
                     this.Language = Object.values(k),
                     this.Literacy = Object.values($),
+                    this.General = Object.values(v),
                     this.assessments = hB,
                     this.selectedSkills = new Set,
                     this.remainingSkills = new Set,
