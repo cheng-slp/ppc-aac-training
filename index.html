@@ -246,10 +246,44 @@
             <link rel="stylesheet" href="styles.42b1098300568310.css">
         </noscript>
     </head>
-    <body class="mat-typography">
-        <app-root></app-root>
-        <script src="runtime.e9399c554fe6df42.js" type="module"></script>
-        <script src="polyfills.0e744aec109abfe0.js" type="module"></script>
-        <script src="main.8956138ed8955126.js" type="module"></script>
+    <body>
+    <div id="selectionForm">
+        <h2>Select Options</h2>
+        <form id="optionsForm">
+            <label>
+                <input type="checkbox" name="option" value="option1"> Option 1
+            </label>
+            <label>
+                <input type="checkbox" name="option" value="option2"> Option 2
+            </label>
+            <label>
+                <input type="checkbox" name="option" value="option3"> Option 3
+            </label>
+            <label>
+                <input type="checkbox" name="option" value="option4"> Option 4
+            </label>
+            <button type="button" onclick="showResults()">Show Results</button>
+        </form>
+        <div id="results">
+            <h2>Results</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    <script>
+        function showResults() {
+            // Get all selected options
+            const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked'))
+                                            .map(option => option.value);
+
+            // Display results
+            const resultsContainer = document.getElementById('resultText');
+            if (selectedOptions.length > 0) {
+                resultsContainer.textContent = `Selected options: ${selectedOptions.join(', ')}`;
+            } else {
+                resultsContainer.textContent = "Please select at least one option.";
+            }
+        }
+    </script>
     </body>
 </html>
