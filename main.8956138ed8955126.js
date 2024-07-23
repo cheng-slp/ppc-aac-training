@@ -15448,25 +15448,6 @@
                 dr(t)
             }
         }
-        function ttB(n, e) {
-            if (1 & n) {
-                const t = Ur();
-                re(0, "mat-chip", 8),
-                De("click", function() {
-                    const o = Rr(t).$implicit;
-                    return xr(St().toggleSkill(o))
-                }),
-                Ne(1),
-                ie()
-            }
-            if (2 & n) {
-                const t = e.$implicit
-                  , r = St();
-                ot("selected", r.selectedSkills.has(t))("disabled", !r.remainingSkills.has(t)),
-                Ye(1),
-                dr(t)
-            }
-        }
         function dB(n, e) {
             if (1 & n && (ja(0)(1),
             re(2, "li", 9),
@@ -15573,13 +15554,6 @@
             $;
             var n
         }
-        )()
-            , tts = (()=>{
-            return (n = tts || (tts = {})).ADULT_STUDENT_INTERACTIONS = "Adult-to-Student Interactions",
-            n.CARE_GIVER_TEST = "CARE GIVER TEST",
-            tts;
-            var n
-        }
         )();
         const hB = [{
             name: "Communication Complexity Scale",
@@ -15680,6 +15654,9 @@
         }, {
             name: "Barker et al.",
             studentCommunicationSkills: new Set([I.SUPPORTING_COMMUNICATION, O.CORRECTING_ERRORS, O.PROMPTING, O.ASKING_QUESTIONS, O.PRAISE])
+        }, {
+            name: "test result",
+            studentCommunicationSkills: new Set([_.SENSORY_TEST, m.COGNITION_TEST, I.MOTOR_TEST, O.SPEECH_TEST, k.LANGUAGE_TEST, $.LITERACY_TEST])
         }];
         let fB = (()=>{
             class n {
@@ -15690,7 +15667,6 @@
                     this.Speech = Object.values(O),
                     this.Language = Object.values(k),
                     this.Literacy = Object.values($),
-                    this.CareGiver = Object.values(tts),
                     this.assessments = hB,
                     this.selectedSkills = new Set,
                     this.remainingSkills = new Set,
@@ -15754,48 +15730,48 @@
                     Ne(12, "Student Communication Skills"),
                     ie(),
                     re(13, "h3"),
-                    Ne(14, "Sensory"),
+                    Ne(14, "Communication Functions"),
                     ie(),
                     re(15, "mat-chip-list", 5),
                     cr(16, oB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(17, "h3"),
-                    Ne(18, "Cognition"),
+                    Ne(18, "Communication Modalities"),
                     ie(),
                     re(19, "mat-chip-list", 5),
                     cr(20, sB, 2, 3, "mat-chip", 6),
                     ie(),
-                    re(21, "h3"),
-                    Ne(22, "Motor"),
+                    re(21, "h2"),
+                    Ne(22, "Communication Partner Skills"),
                     ie(),
-                    re(23, "mat-chip-list", 5),
-                    cr(24, aB, 2, 3, "mat-chip", 6),
+                    re(23, "h3"),
+                    Ne(24, "Global Interaction Skills"),
                     ie(),
-                    re(25, "h3"),
-                    Ne(26, "Speech"),
+                    re(25, "mat-chip-list", 5),
+                    cr(26, aB, 2, 3, "mat-chip", 6),
                     ie(),
-                    re(27, "mat-chip-list", 5),
-                    cr(28, lB, 2, 3, "mat-chip", 6),
+                    re(27, "h3"),
+                    Ne(28, "Discrete Instructional Strategies"),
                     ie(),
-                    re(29, "h3"),
-                    Ne(30, "Language"),
+                    re(29, "mat-chip-list", 5),
+                    cr(30, lB, 2, 3, "mat-chip", 6),
                     ie(),
-                    re(31, "mat-chip-list", 5),
-                    cr(32, uB, 2, 3, "mat-chip", 6),
+                    re(31, "h2"),
+                    Ne(32, "Classroom Environment"),
                     ie(),
                     re(33, "h3"),
-                    Ne(34, "Literacy"),
+                    Ne(34, "Physical Environment"),
                     ie(),
                     re(35, "mat-chip-list", 5),
-                    cr(36, cB, 2, 3, "mat-chip", 6),
+                    cr(36, uB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(37, "h3"),
-                    Ne(38, "Care Giver"),
+                    Ne(38, "Social Environment"),
                     ie(),
                     re(39, "mat-chip-list", 5),
-                    cr(40, ttB, 2, 3, "mat-chip", 6),
+                    cr(40, cB, 2, 3, "mat-chip", 6),
                     ie(),
-                    re(41, "h3"),
+                    re(41, "h2"),
                     Ne(42, "Matching AAC Assessments"),
                     ie(),
                     re(43, "ul"),
@@ -15810,12 +15786,10 @@
                     ot("ngForOf", r.Motor),
                     Ye(4),
                     ot("ngForOf", r.Speech),
-                    Ye(4),
+                    Ye(6),
                     ot("ngForOf", r.Language),
                     Ye(4),
                     ot("ngForOf", r.Literacy),
-                    Ye(4),
-                    ot("ngForOf", r.CareGiver),
                     Ye(4),
                     ot("ngForOf", r.assessments))
                 },
