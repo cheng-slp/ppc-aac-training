@@ -15796,7 +15796,7 @@
                     Ne(42, "General selections"),
                     ie(),
                     re(43, "mat-chip-list", 5),
-                    cr(44, xx, 2, 3, "mat-chip", 6),
+                    cr(44, xB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(45, "h2"),
                     Ne(46, "Matching AAC Assessments"),
