@@ -7,290 +7,87 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <style type="text/css">
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+1F00-1FFF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0370-03FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');
-                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+1F00-1FFF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+0370-03FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');
-                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
-                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+1F00-1FFF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0370-03FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');
-                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-            }
-
-            @font-face {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-                src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
-                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-        </style>
-        <style type="text/css">
-            @font-face {
-                font-family: 'Material Icons';
-                font-style: normal;
-                font-weight: 400;
-                src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
-            }
-
-            .material-icons {
-                font-family: 'Material Icons';
-                font-weight: normal;
-                font-style: normal;
-                font-size: 24px;
-                line-height: 1;
-                letter-spacing: normal;
-                text-transform: none;
-                display: inline-block;
-                white-space: nowrap;
-                word-wrap: normal;
-                direction: ltr;
-                -webkit-font-feature-settings: 'liga';
-                -webkit-font-smoothing: antialiased;
-            }
-        </style>
         <style>
-            .mat-typography {
-                font: 400 14px/20px Roboto,Helvetica Neue,sans-serif;
-                letter-spacing: normal
-            }
-
-            .mat-typography {
-                font: 400 14px/20px Roboto,Helvetica Neue,sans-serif;
-                letter-spacing: normal
-            }
-
-            html,body {
-                height: 100%
-            }
-
-            body {
-                margin: 0;
-                font-family: Roboto,Helvetica Neue,sans-serif
-            }
-        </style>
-        <link rel="stylesheet" href="styles.42b1098300568310.css" media="print" onload="this.media='all'">
-        <noscript>
-            <link rel="stylesheet" href="styles.42b1098300568310.css">
-        </noscript>
+        .section {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
     </head>
-    <body class="mat-typography">
-        <app-root></app-root>
-        <h1>Select an Option</h1>
+    <body>
+        <h1>Results Based on Multiple Selections</h1>
 
-    <!-- Dropdown Menu -->
-    <select id="mySelect" onchange="showResult()">
-        <option value="">--Select an option--</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-    </select>
+    <!-- Section 1 -->
+    <div class="section" id="section1">
+        <h2>Section 1</h2>
+        <select id="select1" onchange="updateResults()">
+            <option value="">--Select an option--</option>
+            <option value="result1a">Option 1A</option>
+            <option value="result1b">Option 1B</option>
+            <option value="result1c">Option 1C</option>
+        </select>
+        <div class="result" id="result1">Please make a selection.</div>
+    </div>
 
-    <!-- Div to display results -->
-    <div id="result"></div>
+    <!-- Section 2 -->
+    <div class="section" id="section2">
+        <h2>Section 2</h2>
+        <select id="select2" onchange="updateResults()">
+            <option value="">--Select an option--</option>
+            <option value="result2a">Option 2A</option>
+            <option value="result2b">Option 2B</option>
+            <option value="result2c">Option 2C</option>
+        </select>
+        <div class="result" id="result2">Please make a selection.</div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+        <h2>Section 3</h2>
+        <select id="select3" onchange="updateResults()">
+            <option value="">--Select an option--</option>
+            <option value="result3a">Option 3A</option>
+            <option value="result3b">Option 3B</option>
+            <option value="result3c">Option 3C</option>
+        </select>
+        <div class="result" id="result3">Please make a selection.</div>
+    </div>
 
     <!-- JavaScript -->
     <script>
-        function showResult() {
-            // Get the value of the selected option
-            const select = document.getElementById('mySelect');
-            const selectedValue = select.value;
+        function updateResults() {
+            // Get the values from each select element
+            const select1Value = document.getElementById('select1').value;
+            const select2Value = document.getElementById('select2').value;
+            const select3Value = document.getElementById('select3').value;
 
-            // Get the result div
-            const resultDiv = document.getElementById('result');
+            // Get the result divs
+            const result1Div = document.getElementById('result1');
+            const result2Div = document.getElementById('result2');
+            const result3Div = document.getElementById('result3');
 
-            // Generate result based on the selected value
-            let resultText;
-            switch (selectedValue) {
-                case 'option1':
-                    resultText = 'You selected Option 1.';
-                    break;
-                case 'option2':
-                    resultText = 'You selected Option 2.';
-                    break;
-                case 'option3':
-                    resultText = 'You selected Option 3.';
-                    break;
+            // Update results based on selections
+            result1Div.textContent = getResultText(select1Value, 1);
+            result2Div.textContent = getResultText(select2Value, 2);
+            result3Div.textContent = getResultText(select3Value, 3);
+        }
+
+        function getResultText(value, sectionNumber) {
+            switch (value) {
+                case 'result' + sectionNumber + 'a':
+                    return 'You selected Option ' + sectionNumber + 'A.';
+                case 'result' + sectionNumber + 'b':
+                    return 'You selected Option ' + sectionNumber + 'B.';
+                case 'result' + sectionNumber + 'c':
+                    return 'You selected Option ' + sectionNumber + 'C.';
                 default:
-                    resultText = 'Please select an option.';
-                    break;
+                    return 'Please make a selection.';
             }
-
-            // Display the result
-            resultDiv.textContent = resultText;
         }
     </script>
-    </body>
+</body>
 </html>
