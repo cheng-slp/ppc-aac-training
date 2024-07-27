@@ -248,8 +248,49 @@
     </head>
     <body class="mat-typography">
         <app-root></app-root>
-        <script src="runtime.e9399c554fe6df42.js" type="module"></script>
-        <script src="polyfills.0e744aec109abfe0.js" type="module"></script>
-        <script src="main.8956138ed8955126.js" type="module"></script>
+        <h1>Select an Option</h1>
+
+    <!-- Dropdown Menu -->
+    <select id="mySelect" onchange="showResult()">
+        <option value="">--Select an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- Div to display results -->
+    <div id="result"></div>
+
+    <!-- JavaScript -->
+    <script>
+        function showResult() {
+            // Get the value of the selected option
+            const select = document.getElementById('mySelect');
+            const selectedValue = select.value;
+
+            // Get the result div
+            const resultDiv = document.getElementById('result');
+
+            // Generate result based on the selected value
+            let resultText;
+            switch (selectedValue) {
+                case 'option1':
+                    resultText = 'You selected Option 1.';
+                    break;
+                case 'option2':
+                    resultText = 'You selected Option 2.';
+                    break;
+                case 'option3':
+                    resultText = 'You selected Option 3.';
+                    break;
+                default:
+                    resultText = 'Please select an option.';
+                    break;
+            }
+
+            // Display the result
+            resultDiv.textContent = resultText;
+        }
+    </script>
     </body>
 </html>
