@@ -15448,25 +15448,6 @@
                 dr(t)
             }
         }
-        function xB(n, e) {
-            if (1 & n) {
-                const t = Ur();
-                re(0, "mat-chip", 8),
-                De("click", function() {
-                    const o = Rr(t).$implicit;
-                    return xr(St().toggleSkill(o))
-                }),
-                Ne(1),
-                ie()
-            }
-            if (2 & n) {
-                const t = e.$implicit
-                  , r = St();
-                ot("selected", r.selectedSkills.has(t))("disabled", !r.remainingSkills.has(t)),
-                Ye(1),
-                dr(t)
-            }
-        }
         function dB(n, e) {
             if (1 & n && (ja(0)(1),
             re(2, "li", 9),
@@ -15573,14 +15554,7 @@
             $;
             var n
         }
-        )()
-            , xx = (()=>{
-            return (n = xx || (xx = {})).GENERAL_INTERACTIONS = "General Interactions",
-            n.GENERAL_OPPORTUNITIES = "General Opportunities",
-            n.GENERAL_TEST = "GENERAL TEST",
-            xx;
-            var n
-        }();
+        )();
         const hB = [{
             name: "Communication Complexity Scale",
             studentCommunicationSkills: new Set([_.PROTEST, _.REQUESTING_MORE, _.REQUESTING_NEW, _.ANSWERING_QUESTIONS, _.PARTICIPATING_SOCIAL_INTERACTIONS, _.JOINT_ATTENTION, _.BEHAVIOR_REGULATION, m.EARLY_SOUNDS, m.BODY_MOVEMENTS, m.FACIAL_EXPRESSIONS, m.LOOKING_AT_SOMEONE_SOMETHING, m.SIMPLE_GESTURES, m.CONVENTIONAL_GESTURES, m.CONVENTIONAL_VOCALIZATIONS, m.CONCRETE_SYMBOLS, m.ABSTRACT_SYMBOLS, m.USING_LANGUAGE, m.ACTIVATING_SWITCH, m.USING_ECHOLALIA])
@@ -15683,9 +15657,6 @@
         }, {
             name: "test result",
             studentCommunicationSkills: new Set([_.SENSORY_TEST, m.COGNITION_TEST, I.MOTOR_TEST, O.SPEECH_TEST, k.LANGUAGE_TEST, $.LITERACY_TEST])
-        }, {
-            name: "general result",
-            studentCommunicationSkills: new Set([xx.GENERAL_INTERACTIONS, xx.GENERAL_OPPORTUNITIES, xx.GENERAL_TEST])
         }];
         let fB = (()=>{
             class n {
@@ -15696,7 +15667,6 @@
                     this.Speech = Object.values(O),
                     this.Language = Object.values(k),
                     this.Literacy = Object.values($),
-                    this.General = Object.values(xx),
                     this.assessments = hB,
                     this.selectedSkills = new Set,
                     this.remainingSkills = new Set,
@@ -15759,52 +15729,46 @@
                     re(13, "h2"),
                     Ne(14, "Sensory selections"),
                     ie(),
-                    re(15, "mat-chip-list", 6),
-                    cr(16, oB, 2, 3, "mat-chip", 7),
+                    re(15, "mat-chip-list", 5),
+                    cr(16, oB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(17, "h2"),
                     Ne(18, "Cognition selections"),
                     ie(),
-                    re(19, "mat-chip-list", 6),
-                    cr(20, sB, 2, 3, "mat-chip", 7),
+                    re(19, "mat-chip-list", 5),
+                    cr(20, sB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(23, "h2"),
                     Ne(24, "Motor selections"),
                     ie(),
-                    re(25, "mat-chip-list", 6),
-                    cr(26, aB, 2, 3, "mat-chip", 7),
+                    re(25, "mat-chip-list", 5),
+                    cr(26, aB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(27, "h2"),
                     Ne(28, "Speech selections"),
                     ie(),
-                    re(29, "mat-chip-list", 6),
-                    cr(30, lB, 2, 3, "mat-chip", 7),
+                    re(29, "mat-chip-list", 5),
+                    cr(30, lB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(33, "h2"),
                     Ne(34, "Language selections"),
                     ie(),
-                    re(35, "mat-chip-list", 6),
-                    cr(36, uB, 2, 3, "mat-chip", 7),
+                    re(35, "mat-chip-list", 5),
+                    cr(36, uB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(37, "h2"),
                     Ne(38, "Literacy selections"),
                     ie(),
-                    re(39, "mat-chip-list", 6),
-                    cr(40, cB, 2, 3, "mat-chip", 7),
+                    re(39, "mat-chip-list", 5),
+                    cr(40, cB, 2, 3, "mat-chip", 6),
                     ie(),
                     re(41, "h2"),
-                    Ne(42, "General selections"),
+                    Ne(42, "Matching AAC Assessments"),
                     ie(),
-                    re(43, "mat-chip-list", 6),
-                    cr(44, xB, 2, 3, "mat-chip", 7),
-                    ie(),
-                    re(45, "h2"),
-                    Ne(46, "Matching AAC Assessments"),
-                    ie(),
-                    re(47, "ul"),
-                    cr(48, dB, 4, 3, "ng-container", 8),
+                    re(43, "ul"),
+                    cr(44, dB, 4, 3, "ng-container", 7),
                     ie()(),
-                    Qo(49, "router-outlet")),
+                    Qo(45, "router-outlet")),
                     2 & t && (Ye(16),
                     ot("ngForOf", r.Sensory),
                     Ye(4),
@@ -15817,8 +15781,6 @@
                     ot("ngForOf", r.Language),
                     Ye(4),
                     ot("ngForOf", r.Literacy),
-                    Ye(4),
-                    ot("ngForOf", r.General),
                     Ye(4),
                     ot("ngForOf", r.assessments))
                 },
