@@ -26,10 +26,17 @@
             cursor: pointer;
             text-align: center;
             flex: 1 1 auto; /* Allows buttons to grow and shrink */
+            min-width: 100px; /* Ensures buttons don't become too narrow */
+            box-sizing: border-box; /* Includes padding and border in element's total width and height */
         }
         .button.selected {
             background-color: #007bff;
             color: #fff;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
         }
     </style>
     </head>
