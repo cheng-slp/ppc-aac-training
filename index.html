@@ -8,86 +8,79 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <style>
-        .section {
+        .button-group {
             margin-bottom: 20px;
         }
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .button.selected {
+            background-color: #007bff;
+            color: #fff;
+        }
         .result {
-            margin-top: 10px;
-            font-size: 1.1em;
+            margin-top: 20px;
+            font-size: 1.2em;
             color: #333;
         }
     </style>
     </head>
     <body>
-        <h1>Results Based on Multiple Selections</h1>
+        <h1>Communication Assessment and Feature Matching Filter</h1>
 
-    <!-- Section 1 -->
-    <div class="section" id="section1">
-        <h2>Section 1</h2>
-        <select id="select1" onchange="updateResults()">
-            <option value="">--Select an option--</option>
-            <option value="result1a">Option 1A</option>
-            <option value="result1b">Option 1B</option>
-            <option value="result1c">Option 1C</option>
-        </select>
-        <div class="result" id="result1">Please make a selection.</div>
+    <!-- Button Group 1 -->
+    <div class="button-group" id="buttonGroup1">
+        <h2>Group 1</h2>
+        <div class="button" data-value="option1a">Option 1A</div>
+        <div class="button" data-value="option1b">Option 1B</div>
+        <div class="button" data-value="option1c">Option 1C</div>
     </div>
 
-    <!-- Section 2 -->
-    <div class="section" id="section2">
-        <h2>Section 2</h2>
-        <select id="select2" onchange="updateResults()">
-            <option value="">--Select an option--</option>
-            <option value="result2a">Option 2A</option>
-            <option value="result2b">Option 2B</option>
-            <option value="result2c">Option 2C</option>
-        </select>
-        <div class="result" id="result2">Please make a selection.</div>
+    <!-- Button Group 2 -->
+    <div class="button-group" id="buttonGroup2">
+        <h2>Group 2</h2>
+        <div class="button" data-value="option2a">Option 2A</div>
+        <div class="button" data-value="option2b">Option 2B</div>
+        <div class="button" data-value="option2c">Option 2C</div>
     </div>
 
-    <!-- Section 3 -->
-    <div class="section" id="section3">
-        <h2>Section 3</h2>
-        <select id="select3" onchange="updateResults()">
-            <option value="">--Select an option--</option>
-            <option value="result3a">Option 3A</option>
-            <option value="result3b">Option 3B</option>
-            <option value="result3c">Option 3C</option>
-        </select>
-        <div class="result" id="result3">Please make a selection.</div>
-    </div>
+    <!-- Display Results -->
+    <div class="result" id="result">Please select options from each group.</div>
 
     <!-- JavaScript -->
     <script>
-        function updateResults() {
-            // Get the values from each select element
-            const select1Value = document.getElementById('select1').value;
-            const select2Value = document.getElementById('select2').value;
-            const select3Value = document.getElementById('select3').value;
-
-            // Get the result divs
-            const result1Div = document.getElementById('result1');
-            const result2Div = document.getElementById('result2');
-            const result3Div = document.getElementById('result3');
-
-            // Update results based on selections
-            result1Div.textContent = getResultText(select1Value, 1);
-            result2Div.textContent = getResultText(select2Value, 2);
-            result3Div.textContent = getResultText(select3Value, 3);
-        }
-
-        function getResultText(value, sectionNumber) {
-            switch (value) {
-                case 'result' + sectionNumber + 'a':
-                    return 'You selected Option ' + sectionNumber + 'A.';
-                case 'result' + sectionNumber + 'b':
-                    return 'You selected Option ' + sectionNumber + 'B.';
-                case 'result' + sectionNumber + 'c':
-                    return 'You selected Option ' + sectionNumber + 'C.';
-                default:
-                    return 'Please make a selection.';
+        // Function to toggle button selection
+        function toggleButtonSelection(event) {
+            if (event.target.classList.contains('button')) {
+                event.target.classList.toggle('selected');
+                updateResults();
             }
         }
+
+        // Function to update results based on selected buttons
+        function updateResults() {
+            const selectedButtons1 = Array.from(document.querySelectorAll('#buttonGroup1 .button.selected'))
+                                           .map(button => button.dataset.value);
+            const selectedButtons2 = Array.from(document.querySelectorAll('#buttonGroup2 .button.selected'))
+                                           .map(button => button.dataset.value);
+
+            const resultDiv = document.getElementById('result');
+
+            let resultText = 'You have selected:\n';
+            resultText += 'Group 1: ' + (selectedButtons1.length > 0 ? selectedButtons1.join(', ') : 'None') + '\n';
+            resultText += 'Group 2: ' + (selectedButtons2.length > 0 ? selectedButtons2.join(', ') : 'None');
+
+            resultDiv.textContent = resultText;
+        }
+
+        // Attach event listeners to button groups
+        document.getElementById('buttonGroup1').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup2').addEventListener('click', toggleButtonSelection);
     </script>
-</body>
+    </body>
 </html>
