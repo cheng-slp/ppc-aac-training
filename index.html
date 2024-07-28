@@ -38,11 +38,25 @@
             font-size: 1.2em;
             color: #333;
         }
+        .refresh-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+        }
+        .refresh-button:hover {
+            background-color: #ddd;
+        }
     </style>
     </head>
     <body>
         <h1>Communication Assessment and Feature Matching Filter</h1>
 
+    <button class="refresh-button" onclick="clearSelections()">Refresh</button>
+        
     <!-- Button Group 1 -->
     <div class="button-group" id="buttonGroup1">
         <h2>Sensory</h2>
@@ -106,6 +120,8 @@
         <div class="button" data-value="option6b">Spell Spanish</div>
     </div>
 
+    <button class="refresh-button" onclick="clearSelections()">Refresh</button>
+
     
     <!-- Display Results -->
     <h2>Matching AAC materials, strategies, and procedures</h2>
@@ -157,6 +173,7 @@
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
             options += (selectedButtons6.length > 0 ? selectedButtons6.join(', ') + ', ' : '');
 
+
             const [result1, result2, result3] = filterResult(options);
             resultDiv1.textContent = result1;
             resultDiv2.textContent = result2;
@@ -172,6 +189,13 @@
                 default:
                     return ['Contiune making selections, or refreash this page to make new selections', 'Contiune making selections, or refreash this page to make new selections', 'Contiune making selections, or refreash this page to make new selections'];
         }
+        }
+
+        // Function to clear all button selections
+        function clearSelections() {
+            document.querySelectorAll('#buttonContainer .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            updateResults(); // Update the result display to show no selections
         }
         
 
