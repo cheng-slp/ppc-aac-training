@@ -193,7 +193,17 @@
 
         // Function to clear all button selections
         function clearSelections() {
-            document.querySelectorAll('#button-group .button.selected')
+            document.querySelectorAll('#buttonGroup1 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup2 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup3 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup4 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup5 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup6 .button.selected')
                 .forEach(button => button.classList.remove('selected'));
             updateResults(); // Update the result display to show no selections
         }
