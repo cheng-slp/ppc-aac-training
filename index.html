@@ -148,9 +148,28 @@
             resultText += 'Group 5: ' + (selectedButtons5.length > 0 ? selectedButtons5.join(', ') : 'None') + '\n';
             resultText += 'Group 6: ' + (selectedButtons6.length > 0 ? selectedButtons6.join(', ') : 'None');
 
+            let options = ''
+            options += (selectedButtons1.length > 0 ? selectedButtons1.join(', ') + ', ' : '')
+            options += (selectedButtons2.length > 0 ? selectedButtons2.join(', ') + ', ' : '')
+            options += (selectedButtons1.length > 0 ? selectedButtons3.join(', ') + ', ' : '')
+            options += (selectedButtons1.length > 0 ? selectedButtons4.join(', ') + ', ' : '')
+            options += (selectedButtons1.length > 0 ? selectedButtons5.join(', ') + ', ' : '')
+            options += (selectedButtons1.length > 0 ? selectedButtons6.join(', ') + ', ' : '')
 
-            resultDiv.textContent = resultText;
+
+            resultDiv.textContent = filterResult(options);
         }
+
+        function filterResult(options) {
+            switch (options) {
+                case 'option1a, option2a, ':
+                    return 'test selection1';
+                case 'option3a, option4a, :
+                    return 'test selection2';
+                default:
+                    return 'No matched accessment has found, please refreash this page to make new selections';
+        }
+        
 
         // Attach event listeners to button groups
         document.getElementById('buttonGroup1').addEventListener('click', toggleButtonSelection);
