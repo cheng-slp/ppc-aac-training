@@ -187,13 +187,13 @@
                 case 'option3a, option4a, ':
                     return ['test selection4', 'test selection5', 'test selection6'];
                 default:
-                    return ['Contiune making selections, or refreash this page to make new selections', 'Contiune making selections, or refreash this page to make new selections', 'Contiune making selections, or refreash this page to make new selections'];
+                    return ['Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections'];
         }
         }
 
         // Function to clear all button selections
         function clearSelections() {
-            document.querySelectorAll('#buttonContainer .button.selected')
+            document.querySelectorAll('#button-group .button.selected')
                 .forEach(button => button.classList.remove('selected'));
             updateResults(); // Update the result display to show no selections
         }
