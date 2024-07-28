@@ -156,7 +156,7 @@
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
             options += (selectedButtons6.length > 0 ? selectedButtons6.join(', ') + ', ' : '');
 
-            result1, result2, result3 = filterResult(options);
+            const [result1, result2, result3] = filterResult(options);
             resultDiv1.textContent = result1;
             resultDiv2.textContent = result2;
             resultDiv3.textContent = result3;
@@ -165,11 +165,11 @@
         function filterResult(options) {
             switch (options) {
                 case 'option1a, option2a, ':
-                    return 'test selection1', 'test selection2', 'test selection3';
+                    return ['test selection1', 'test selection2', 'test selection3'];
                 case 'option3a, option4a, ':
-                    return 'test selection4', 'test selection5', 'test selection6';
+                    return ['test selection4', 'test selection5', 'test selection6'];
                 default:
-                    return 'No matched assesment has found, please refreash this page to make new selections', 'No matched assesment has found, please refreash this page to make new selections', 'No matched assesment has found, please refreash this page to make new selections';
+                    return ['No matched assesment has found, please refreash this page to make new selections', 'No matched assesment has found, please refreash this page to make new selections', 'No matched assesment has found, please refreash this page to make new selections'];
         }
         }
         
