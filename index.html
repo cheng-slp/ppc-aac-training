@@ -108,8 +108,13 @@
 
     
     <!-- Display Results -->
-    <h2>Matching AAC Assessments</h2>
-    <div class="result" id="result">Please select options from each group.</div>
+    <h2>Matching AAC materials， strategies, and procedures</h2>
+    <h3>AAC matericals</h3>
+    <div class="result" id="result1">Please select options from each group.</div>
+    <h3>AAC strategies</h3>
+    <div class="result" id="result2">Please select options from each group.</div>
+    <h3>AAC procedures</h3>
+    <div class="result" id="result3">Please select options from each group.</div>
     
 
         
@@ -138,7 +143,9 @@
             const selectedButtons6 = Array.from(document.querySelectorAll('#buttonGroup6 .button.selected'))
                                            .map(button => button.dataset.value);
 
-            const resultDiv = document.getElementById('result');
+            const resultDiv1 = document.getElementById('result1');
+            const resultDiv2 = document.getElementById('result2');
+            const resultDiv3 = document.getElementById('result3');
 
 
             let options = '';
@@ -149,18 +156,20 @@
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
             options += (selectedButtons6.length > 0 ? selectedButtons6.join(', ') + ', ' : '');
 
-
-            resultDiv.textContent = filterResult(options);
+            result1, result2, result3 = filterResult(options);
+            resultDiv1.textContent = result1;
+            resultDiv2.textContent = result2;
+            resultDiv3.textContent = result3;
         }
 
         function filterResult(options) {
             switch (options) {
                 case 'option1a, option2a, ':
-                    return 'test selection1 \r\n second line'.bold() ;
+                    return 'test selection1', 'test selection2', 'test selection3';
                 case 'option3a, option4a, ':
-                    return 'test selection2';
+                    return 'test selection4', 'test selection5', 'test selection6';
                 default:
-                    return 'No matched assesment has found, please refreash this page to make new selections';
+                    return 'No matched assesment has found, please refreash this page to make new selections', ;
         }
         }
         
