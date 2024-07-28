@@ -66,6 +66,47 @@
         <div class="button" data-value="option2h">Rapidly fatigue</div>
     </div>
 
+    <!-- Button Group 3 -->
+    <div class="button-group" id="buttonGroup3">
+        <h2>Motor</h2>
+        <div class="button" data-value="option3a">Write legibly</div>
+        <div class="button" data-value="option3b">Isolate fingers to point to symbols</div>
+        <div class="button" data-value="option3c">Signal yes/no</div>
+        <div class="button" data-value="option3d">Not able to write legibly</div>
+        <div class="button" data-value="option3e">Not able to point</div>
+        <div class="button" data-value="option3f">Rapidly fatigue</div>
+        <div class="button" data-value="option3g">Restraints</div>
+        <div class="button" data-value="option3h">Limited to no functional motor skills on the extremities,  good ocular motor function</div>
+    </div>
+
+    <!-- Button Group 4 -->
+    <div class="button-group" id="buttonGroup4">
+        <h2>Speech</h2>
+        <div class="button" data-value="option4a">Limited articulation/reduced speech intelligibility</div>
+        <div class="button" data-value="option4b">Nasal ETT</div>
+        <div class="button" data-value="option4c">Oral ETT</div>
+        <div class="button" data-value="option4d">Tracheostomy</div>
+        <div class="button" data-value="option4e">Laryngectomy</div>
+    </div>
+
+    
+    <!-- Button Group 5 -->
+    <div class="button-group" id="buttonGroup5">
+        <h2>Language</h2>
+        <div class="button" data-value="option5a">Speak English</div>
+        <div class="button" data-value="option5b">Limited English skills, speak Spanish</div>
+        <div class="button" data-value="option5c">Stroke/Aphasia</div>
+        <div class="button" data-value="option5d">Speak other languages</div>
+    </div>
+
+    <!-- Button Group 6 -->
+    <div class="button-group" id="buttonGroup6">
+        <h2>Literacy</h2>
+        <div class="button" data-value="option6a">Spell English</div>
+        <div class="button" data-value="option6b">Spell Spanish</div>
+    </div>
+
+    
     <!-- Display Results -->
     <h2>Matching AAC Assessments</h2>
     <div class="result" id="result">Please select options from each group.</div>
@@ -88,12 +129,25 @@
                                            .map(button => button.dataset.value);
             const selectedButtons2 = Array.from(document.querySelectorAll('#buttonGroup2 .button.selected'))
                                            .map(button => button.dataset.value);
+            const selectedButtons3 = Array.from(document.querySelectorAll('#buttonGroup3 .button.selected'))
+                                           .map(button => button.dataset.value);
+            const selectedButtons4 = Array.from(document.querySelectorAll('#buttonGroup4 .button.selected'))
+                                           .map(button => button.dataset.value);
+            const selectedButtons5 = Array.from(document.querySelectorAll('#buttonGroup5 .button.selected'))
+                                           .map(button => button.dataset.value);
+            const selectedButtons6 = Array.from(document.querySelectorAll('#buttonGroup6 .button.selected'))
+                                           .map(button => button.dataset.value);
 
             const resultDiv = document.getElementById('result');
 
             let resultText = 'You have selected:\n';
             resultText += 'Group 1: ' + (selectedButtons1.length > 0 ? selectedButtons1.join(', ') : 'None') + '\n';
-            resultText += 'Group 2: ' + (selectedButtons2.length > 0 ? selectedButtons2.join(', ') : 'None');
+            resultText += 'Group 2: ' + (selectedButtons2.length > 0 ? selectedButtons2.join(', ') : 'None') + '\n';
+            resultText += 'Group 3: ' + (selectedButtons3.length > 0 ? selectedButtons3.join(', ') : 'None') + '\n';
+            resultText += 'Group 4: ' + (selectedButtons4.length > 0 ? selectedButtons4.join(', ') : 'None') + '\n';
+            resultText += 'Group 5: ' + (selectedButtons5.length > 0 ? selectedButtons5.join(', ') : 'None') + '\n';
+            resultText += 'Group 6: ' + (selectedButtons6.length > 0 ? selectedButtons6.join(', ') : 'None');
+
 
             resultDiv.textContent = resultText;
         }
@@ -101,6 +155,10 @@
         // Attach event listeners to button groups
         document.getElementById('buttonGroup1').addEventListener('click', toggleButtonSelection);
         document.getElementById('buttonGroup2').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup3').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup4').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup5').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup6').addEventListener('click', toggleButtonSelection);
     </script>
     </body>
 </html>
