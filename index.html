@@ -171,6 +171,8 @@
                                            .map(button => button.dataset.value);
             const selectedButtons6 = Array.from(document.querySelectorAll('#buttonGroup6 .button.selected'))
                                            .map(button => button.dataset.value);
+            const selectedButtons7 = Array.from(document.querySelectorAll('#buttonGroup7 .button.selected'))
+                                           .map(button => button.dataset.value);
 
             const resultDiv1 = document.getElementById('result1');
             const resultDiv2 = document.getElementById('result2');
@@ -184,6 +186,7 @@
             options += (selectedButtons4.length > 0 ? selectedButtons4.join(', ') + ', ' : '');
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
             options += (selectedButtons6.length > 0 ? selectedButtons6.join(', ') + ', ' : '');
+            options += (selectedButtons6.length > 0 ? selectedButtons7.join(', ') + ', ' : '');
 
 
             const [result1, result2, result3] = filterResult(options);
@@ -217,6 +220,8 @@
                 .forEach(button => button.classList.remove('selected'));
             document.querySelectorAll('#buttonGroup6 .button.selected')
                 .forEach(button => button.classList.remove('selected'));
+            document.querySelectorAll('#buttonGroup7 .button.selected')
+                .forEach(button => button.classList.remove('selected'));
             updateResults(); // Update the result display to show no selections
         }
         
@@ -228,6 +233,7 @@
         document.getElementById('buttonGroup4').addEventListener('click', toggleButtonSelection);
         document.getElementById('buttonGroup5').addEventListener('click', toggleButtonSelection);
         document.getElementById('buttonGroup6').addEventListener('click', toggleButtonSelection);
+        document.getElementById('buttonGroup7').addEventListener('click', toggleButtonSelection);
     </script>
     </body>
 </html>
