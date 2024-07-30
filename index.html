@@ -196,9 +196,63 @@
         }
 
         function filterResult(options) {
+            // result list
+            // materials
+            const material_01 = '01 Needs Communication Board (can also be used as visual support to augment provider’s input and facilitate patient’s understanding)';
+            const material_02 = '01s Simple Needs Communication Board (can also be used as visual support to augment provider’s input and facilitate patient’s understanding)';
+            const material_03 = '02 Letter Communication Board';
+            const material_04 = '03 Pain Board';
+            const material_05 = '04 Reposition Board';
+            const material_06 = '05 Emotion Board';
+            const material_07 = '06 Whiteboard + Marker';
+            const material_08 = '07 Medical Decision Board';
+            const material_09 = '08 Tracheostomy – Guide for Patients and Caregivers';
+            const material_10 = '09a AAC Brochure for Caregivers';
+            const material_11 = '09b Blank Communication Board';
+            const material_12 = '10a Spanish/English Bilingual Needs Communication Board';
+            const material_13 = '10b Spanish Letter Board';
+            const material_14 = '10c Spanish/English Bilingual Pain Communication Board';
+            const material_15 = '10d Spanish/English Bilingual Medical Decision-making Board';
+            const material_16 = '10e Black Communication Board for Spanish-speaking Caregivers';
+            const material_17 = '11 Eye Gaze Board';
+            const material_18 = '12 High-tech Communication Applications and Devices (resources only)';
+            const material_19 = '13 Resources for patients who speak languages other than English or Spanish';
+            const material_20 = 'Tangible items (offer a selection of objects for patients to choose from)';
+            const material_21 = 'Keyboard on a phone or a tablet';
+            const material_22 = '00 Bedside Sign';
+
+            // Strategies
+            const strategy_01 = 'Establish a confirmatory signal or yes/no signal + Complete the “00 Bedside Sign” and post a sign on the wall near the patient’s bed for easy reference for other providers and visitors.';
+            const strategy_02 = 'Ask yes/no questions';
+            const strategy_03 = 'Partner-assisted scanning – visual + auditory, row/column or linear';
+            const strategy_04 = 'Partner-assisted scanning – visual + auditory, linear';
+            const strategy_05 = 'Partner-assisted scanning – auditory only, linear or row/column';
+            const strategy_06 = 'Augmented input (e.g., present visuals, tangible items, and so forth to facilitate patients’ understanding)';
+            const strategy_07 = 'Repeat questions and confirm the patient’s response at least twice';
+            const strategy_08 = 'Instruct the patient to speak slowly with exaggerated pronunciation, and to point to symbols on the 01 needs communication board, 02 letter communication board, or use the 06 whiteboard to write or draw, to improve comprehensibility';
+            const strategy_09 = 'Some patients with limited articulation may prefer to rely on speech rather than using communication boards. In such cases, providers can suggest the situational use of AAC during communication breakdowns by saying, “I am sorry, I don’t understand you. Can you speak slowly, and spell the word out for me? / Can you point to the first letter of each word as you talk?”';
+            const strategy_10 = 'Use recognition memory over recall memory. Use pictures, communication boards, photos, and maps to facilitate patients’ receptive and expressive communication.';
+
+            // Procedures
+            const procedure_01 = "Check with caregivers to ensure patients have access to glasses or hearing aids. Verify that hearing aids have functioning batteries. Obtain the patient's consent first, then assist the patient in putting on their glasses or hearing aids. Consult with doctors or audiologists if further intervention is required for hearing issues.";
+            const procedure_02 = 'Consult with doctors and the therapy team (e.g., SLP, OT) for access methods for patients with complex sensory impairments.';
+            const procedure_03 = "Consult with caregivers to understand the patient's usual communication methods prior to ICU admission.";
+            const procedure_04 = 'Continue to assess cognition';
+            const procedure_05 = 'Consult with the therapy team (e.g., SLPs, OTs ) for alternative communication strategies';
+            const procedure_06 = 'Consult with the therapy team for adaptive equipment';
+            const procedure_07 = "Obtain the doctor’s permission and the patient's consent before temporarily removing restraints for communication purposes.";
+            const procedure_08 = 'Consult with doctors and the therapy team regarding the use of an electrolarynx';
+            const procedure_09 = 'Consult with doctors and the therapy team （e.g., respiratory therapists, SLPs, to determine if the patient is a candidate for a speaking valve.)';
+            const procedure_10 = 'Order in-person translator services';
+            const procedure_11 = 'Use an iPad translator';
+            const procedure_12 = 'Request assistance from bilingual staff members on the floor (If available)';
+            const procedure_13 = 'Seek assistance from a bilingual caregiver (if available)';
+            const procedure_14 = 'Involve caregivers in the process to enhance effective communication + 09 AAC Brochure for caregivers';
+            
+            
             switch (options) {
-                case 'option1a, option2a, ':
-                    return ['test selection1', 'test selection2', 'test selection3'];
+                case 'option1a, option1b, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option 7b, ':
+                    return [material_01+ '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18  + '\n' + material_21, 'None', procedure_08];
                 case 'option3a, option4a, ':
                     return ['test selection4', 'test selection5', 'test selection6'];
                 default:
