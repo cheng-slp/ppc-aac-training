@@ -37,7 +37,7 @@
             white-space: pre-line; /* Preserve line breaks from the string */
             border: 1px solid #ddd; /* Optional: to see the boundaries */
             padding: 10px; /* Optional: add some padding */
-            width: 2000px; /* Optional: adjust the width as needed */
+            width: 1500px; /* Optional: adjust the width as needed */
             line-height: 2; /* Adjusts the space between lines. */
         }
         .refresh-button {
@@ -254,9 +254,13 @@
             
             switch (options) {
                 case 'option1a, option1b, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
-                    return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18  + '\n' + material_21, '\n', procedure_08];
-                case 'option3a, option4a, ':
-                    return ['test selection4', 'test selection5', 'test selection6'];
+                    return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_08];
+                case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                    return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
+                case 'option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                    return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
+                case 'option1a, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                    return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
                 default:
                     return ['Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections'];
         }
