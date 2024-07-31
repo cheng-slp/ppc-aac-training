@@ -125,15 +125,6 @@
         <div class="button" data-value="option6b">Spell Spanish</div>
     </div>
 
-    <!-- Button Group 7 -->
-    <div class="button-group" id="buttonGroup7">
-        <h2>Caregiver</h2>
-        <div class="button" data-value="option7a">Speak English</div>
-        <div class="button" data-value="option7b">Spell English</div>
-        <div class="button" data-value="option7c">Speak Spanish</div>
-        <div class="button" data-value="option7d">Spell Spanish</div>
-    </div>
-
     <button class="refresh-button" onclick="clearSelections()">Refresh</button>
 
     
@@ -173,8 +164,6 @@
                                            .map(button => button.dataset.value);
             const selectedButtons6 = Array.from(document.querySelectorAll('#buttonGroup6 .button.selected'))
                                            .map(button => button.dataset.value);
-            const selectedButtons7 = Array.from(document.querySelectorAll('#buttonGroup7 .button.selected'))
-                                           .map(button => button.dataset.value);
 
             const resultDiv1 = document.getElementById('result1');
             const resultDiv2 = document.getElementById('result2');
@@ -188,7 +177,6 @@
             options += (selectedButtons4.length > 0 ? selectedButtons4.join(', ') + ', ' : '');
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
             options += (selectedButtons6.length > 0 ? selectedButtons6.join(', ') + ', ' : '');
-            options += (selectedButtons7.length > 0 ? selectedButtons7.join(', ') + ', ' : '');
 
 
             const [result1, result2, result3] = filterResult(options);
@@ -253,13 +241,13 @@
             
             
             switch (options) {
-                case 'option1a, option1b, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                case 'option1a, option1b, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_08];
-                case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
-                case 'option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                case 'option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
-                case 'option1a, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, option7a, option7b, ':
+                case 'option1a, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
                 default:
                     return ['Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections', 'Contiune making selections, or click refreash button to make new selections'];
@@ -280,8 +268,6 @@
                 .forEach(button => button.classList.remove('selected'));
             document.querySelectorAll('#buttonGroup6 .button.selected')
                 .forEach(button => button.classList.remove('selected'));
-            document.querySelectorAll('#buttonGroup7 .button.selected')
-                .forEach(button => button.classList.remove('selected'));
             updateResults(); // Update the result display to show no selections
         }
         
@@ -293,7 +279,6 @@
         document.getElementById('buttonGroup4').addEventListener('click', toggleButtonSelection);
         document.getElementById('buttonGroup5').addEventListener('click', toggleButtonSelection);
         document.getElementById('buttonGroup6').addEventListener('click', toggleButtonSelection);
-        document.getElementById('buttonGroup7').addEventListener('click', toggleButtonSelection);
     </script>
     </body>
 </html>
