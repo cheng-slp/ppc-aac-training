@@ -78,8 +78,8 @@
         <div class="button" data-value="option2d">Overall adequate cognitive abilities</div>
         <div class="button" data-value="option2e">Delirious</div>
         <div class="button" data-value="option2f">Sedated</div>
+        <div class="button" data-value="option2g">Rapidly fatigued</div>
         <div class="button" data-value="option2h">Dementia</div>
-        <div class="button" data-value="option2i">Rapidly fatigued</div>
     </div>
 
     <!-- Button Group 3 -->
@@ -238,10 +238,13 @@
             
             
             switch (options) {
+                // 101
                 case 'option1a, option1b, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_08];
+                //102 
                 case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
+               //
                 case 'option1b, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, 'None', procedure_01 + '\n' + procedure_08];
                 case 'option1a, option1c, option2a, option2b, option2c, option2d, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
