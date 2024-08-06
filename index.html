@@ -76,9 +76,9 @@
         <div class="button" data-value="option2b">Reliable yes/no responses</div>
         <div class="button" data-value="option2c">Able to follow 1-step commands</div>
         <div class="button" data-value="option2d">Overall adequate cognitive abilities</div>
-        <div class="button" data-value="option2g">Delirious</div>
-        <div class="button" data-value="option2g">Sedated</div>
-        <div class="button" data-value="option2g">Rapidly fatigued</div>
+        <div class="button" data-value="option2e">Delirious</div>
+        <div class="button" data-value="option2e">Sedated</div>
+        <div class="button" data-value="option2e">Rapidly fatigued</div>
         <div class="button" data-value="option2h">Dementia</div>
     </div>
 
@@ -284,13 +284,13 @@
                     return [material_01 + '\n' + material_03 + '\n' + material_07 + '\n' + material_10 + '\n' + material_11 + '\n' + material_18 + '\n' + material_21, strategy_08 + '\n' + strategy_09, 'None'];
                //good cog, limited motor
                //401a good cog, limited motor, rapidly fatigued, needs glasses
-                case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option2g, option3d, option3e, option3g, option4d, option5a, option6a, ':
+                case 'option1a, option1b, option1c, option2a, option2b, option2c, option2d, option2e, option3d, option3e, option3g, option4d, option5a, option6a, ':
                     return [material_22 + '\n' +  material_01 + '\n' + material_02 + '\n' + material_03 + '\n' + material_10 + '\n' + material_11 + '\n' + material_17 + '\n' + material_18, strategy_01 + '\n' + strategy_02 + '\n' + strategy_11 + '\n' + strategy_03 + '\n' + strategy_06, procedure_01 + '\n' + procedure_05 + '\n' + procedure_14];
                 // limited cog, limited motor
-                case 'option1a, option1b, option2e, option2f, option2g, option3e, option3f, option3g, option4b, option5a, option6a, ':
+                case 'option1a, option1b, option2e, option3e, option3f, option3g, option4b, option5a, option6a, ':
                     return [material_02 + '\n' + material_10 + '\n' + material_11 + '\n' + material_22, strategy_01 + '\n' + strategy_02 + '\n' + strategy_04 + '\n' + strategy_06 + '\n' + strategy_07, procedure_04 + '\n' + procedure_05 + '\n' + procedure_14];
                 //701
-                case 'option1a, option1b, option2e, option2f, option2g, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
+                case 'option1a, option1b, option2e, option3a, option3b, option3c, option3d, option4b, option5a, option6a, ':
                     return [material_02 + '\n' + material_10 + '\n' + material_11 + '\n' + material_22, strategy_01 + '\n' + strategy_02 + '\n' + strategy_04 + '\n' + strategy_06 + '\n' + strategy_07, procedure_04 + '\n' + procedure_05 + '\n' + procedure_14];
                 default:
                     return ['Continue making selections, or click the refresh button to make new selections', 'Continue making selections, or click the refresh button to make new selections', 'Continue making selections, or click the refresh button to make new selections'];
