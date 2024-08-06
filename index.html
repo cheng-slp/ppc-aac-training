@@ -76,8 +76,8 @@
         <div class="button" data-value="option2b">Reliable yes/no responses</div>
         <div class="button" data-value="option2c">Able to follow 1-step commands</div>
         <div class="button" data-value="option2d">Overall adequate cognitive abilities</div>
-        <div class="button" data-value="option2e">Delirious</div>
-        <div class="button" data-value="option2f">Sedated</div>
+        <div class="button" data-value="option2g">Delirious</div>
+        <div class="button" data-value="option2g">Sedated</div>
         <div class="button" data-value="option2g">Rapidly fatigued</div>
         <div class="button" data-value="option2h">Dementia</div>
     </div>
@@ -153,6 +153,7 @@
                                            .map(button => button.dataset.value);
             const selectedButtons2 = Array.from(document.querySelectorAll('#buttonGroup2 .button.selected'))
                                            .map(button => button.dataset.value);
+            const uniq2 = [...new Set(selectedButtons2)];
             const selectedButtons3 = Array.from(document.querySelectorAll('#buttonGroup3 .button.selected'))
                                            .map(button => button.dataset.value);
             const selectedButtons4 = Array.from(document.querySelectorAll('#buttonGroup4 .button.selected'))
@@ -169,7 +170,7 @@
 
             let options = '';
             options += (selectedButtons1.length > 0 ? selectedButtons1.join(', ') + ', ' : '');
-            options += (selectedButtons2.length > 0 ? selectedButtons2.join(', ') + ', ' : '');
+            options += (uniq2.length > 0 ? uniq2.join(', ') + ', ' : '');
             options += (selectedButtons3.length > 0 ? selectedButtons3.join(', ') + ', ' : '');
             options += (selectedButtons4.length > 0 ? selectedButtons4.join(', ') + ', ' : '');
             options += (selectedButtons5.length > 0 ? selectedButtons5.join(', ') + ', ' : '');
