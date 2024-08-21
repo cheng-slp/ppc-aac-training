@@ -74,11 +74,11 @@
         <h2>Cognition</h2>
         <div class="button" data-value="option2a">Alert</div>
         <div class="button" data-value="option2b">Reliable yes/no responses</div>
-        <div class="button" data-value="option2c">Able to follow 1-step commands</div>
+        <div class="button" data-value="option2c">Able to follow/understand 1-step commands</div>
         <div class="button" data-value="option2d">Overall adequate cognitive abilities</div>
-        <div class="button" data-value="option2e">Delirious</div>
+        <div class="button" data-value="option2e">Delirious/Inconsistent attention</div>
         <div class="button" data-value="option2e">Sedated</div>
-        <div class="button" data-value="option2e">Rapidly fatigued</div>
+        <div class="button" data-value="option2e">Rapidly fatigues</div>
         <div class="button" data-value="option2h">Dementia</div>
     </div>
 
@@ -86,10 +86,12 @@
     <div class="button-group" id="buttonGroup3">
         <h2>Motor</h2>
         <div class="button" data-value="option3a">Writes legibly</div>
-        <div class="button" data-value="option3b">Points to symbols on a comm board</div>
+        <div class="button" data-value="option3b">Able to isolate fingers to point</div>
+        <div class="button" data-value="option3b1">Able to type</div>
         <div class="button" data-value="option3c">Uses hand gestures</div>
         <div class="button" data-value="option3d">Signals yes/no (e.g., hand gestures, eye blinks, hand squeezes, etc.)</div>
-        <div class="button" data-value="option3e">Rapidly fatigued</div>
+        <div class="button" data-value="option3d1">weakness/Discoordination</div>
+        <div class="button" data-value="option3e">Rapidly fatigues</div>
         <div class="button" data-value="option3f">Restraints*</div>
         <div class="button" data-value="option3g">Limited to no functional motor skills on the extremities,  good ocular motor function</div>
    <h6>*Select both "Write legibly" and "Restraints" if the patient has adequate ability to write but is restrained. Same as "Point", "Signal yes/no", and "Use gestures".</h3>
@@ -187,7 +189,7 @@
             // result list
             // materials
             const material_01 = '01 Needs Communication Board (can also be used as visual support to augment provider’s input and facilitate patient’s understanding)';
-            const material_02 = '01s Simple Needs Communication Board (can also be used as visual support to augment provider’s input and facilitate patient’s understanding)';
+            const material_02 = '01s Simplified Needs Communication Board (can also be used as visual support to augment provider’s input and facilitate patient’s understanding)';
             const material_03 = '02 Letter Communication Board';
             const material_04 = '03 Pain Board';
             const material_05 = '04 Reposition Board';
@@ -208,6 +210,7 @@
             const material_20 = 'Tangible items (offer a selection of objects for patients to choose from)';
             const material_21 = 'Keyboard on a phone or a tablet';
             const material_22 = '00 Bedside Sign';
+            const material_23 = '00a Yes/No Communication Board';
 
             // Strategies
             const strategy_01 = 'Establish a confirmatory signal or yes/no signal + Complete the “00 Bedside Sign” and post a sign on the wall near the patient’s bed for easy reference for other providers and visitors.';
@@ -220,7 +223,9 @@
             const strategy_08 = 'Instruct the patient to speak slowly with exaggerated pronunciation, and to point to symbols on the 01 needs communication board, 02 letter communication board, or use the 06 whiteboard to write or draw, to improve comprehensibility';
             const strategy_09 = 'Some patients with limited articulation may prefer to rely on speech rather than using communication boards. In such cases, providers can suggest the situational use of AAC during communication breakdowns by saying, “I am sorry, I don’t understand you. Can you speak slowly, and spell the word out for me? / Can you point to the first letter of each word as you talk?”';
             const strategy_10 = 'Use recognition memory over recall memory. Use pictures, communication boards, photos, and maps to facilitate patients’ receptive and expressive communication.';
-            const strategy_11 = 'Present a limited number of choices.';
+            const strategy_11 = 'Present a limited number of choices';
+            const strategy_12 = 'Pause/wait - allow time for the patient to participate in the interaction';
+
 
             // Procedures
             const procedure_01 = "Check with caregivers to ensure patients have access to glasses or hearing aids. Verify that hearing aids have functioning batteries. Obtain the patient's consent first, then assist the patient in putting on their glasses or hearing aids. Consult with doctors or audiologists if further intervention is required for hearing issues.";
