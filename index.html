@@ -262,19 +262,27 @@
                 M.push(M01, M09, M10)
                 S.push(S12)
                 P.push(P12)
-            } else if (option1.includes('option1c')) {
+            }
+            
+            if (option1.includes('option1c')) {
                 M.push(M01, M09)
                 S.push(S12)
                 P.push(P01, P12)
-            } else if (option1.includes('option1d')) {
+            } 
+            
+            if (option1.includes('option1d')) {
                 M.push(M01, M02, M09, M22)
                 S.push(S05, S12)
                 P.push(P12)
-            } else if (option1.includes('option1f')) {
+            } 
+            
+            if (option1.includes('option1f')) {
                 M.push(M02, M09, M20, M22)
                 S.push(S03, S11, S12)
                 P.push(P03, P05, P12)
-            } else {
+            } 
+
+            if (option1.length === 0) {
                 M.push('default')
                 S.push('default')
                 P.push('default')
