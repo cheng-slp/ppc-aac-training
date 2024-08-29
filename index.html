@@ -266,13 +266,24 @@
                 M.push(M01, M09)
                 S.push(S12)
                 P.push(P01, P12)
+            } else if (option1.includes('option1d')) {
+                M.push(M01, M02, M09, M22)
+                S.push(S05, S12)
+                P.push(P12)
+            } else if (option1.includes('option1f')) {
+                M.push(M02, M09, M20, M22)
+                S.push(S03, S11, S12)
+                P.push(P03, P05, P12)
             } else {
                 M.push('default')
                 S.push('default')
                 P.push('default')
             }
 
-            return [M.join(' \n'), S.join(' \n'), P.join(' \n')]
+            const uniqM = [...new Set(M)];
+            const uniqS = [...new Set(S)];
+            const uniqP = [...new Set(P)];
+            return [uniqM.join(' \n'), uniqS.join(' \n'), uniqP.join(' \n')]
 
             
             
