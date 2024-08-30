@@ -257,7 +257,7 @@
             let M = []
             let S = []
             let P = []
-
+            // option1
             if (option1.includes('option1f')) {
                 M.push(M02, M10, M20, M22)
                 S.push(S03, S11, S12)
@@ -279,7 +279,7 @@
                 S.push(S12)
                 P.push(P01, P12)
             }
-
+            //option2
             if (option2.includes('option2h')) {
                 M.push(M02, M22, M23)
                 S.push(S01,S02, S06, S07, S11, S10, S12, S13)
@@ -295,8 +295,51 @@
                 M.push(M01, M10)
                 S.push(S12)
                 P.push(P12)
-
             }
+            //option3
+            if (option3.includes('option3g')) {
+                M.push(M22, M23, M01, M02, M10, M11, M17, M18)
+                S.push(S01, S02, S03, S06, S07, S11, S12)
+                P.push(P05, P12)
+                if (option6.includes('option6a')) {
+                    M.push(M03)
+                }
+            }
+            else if (option3.includes('option3d1') || option3.includes('option3e')) {
+                M.push(M22, M23, M01, M02, M10, M17)
+                S.push(S01, S02, S05, S06, S07, S11, S12)
+                P.push(P05, P12)
+            } 
+            else if (option3.includes('option3f')) {
+                M.push(M22, M23, M01, M05, M10, M17)
+                S.push(S03)
+                P.push(P05, P07, P12)
+            } else {
+                if (option3.includes('option3c') || option3.includes('option3d')) {
+                    M.push(M01, M02, M10, M17, M22, M23)
+                    S.push(S01, S03, S06, S07, S12)
+                    P.push(P05, P12)
+                    if (option6.includes('option6a')) {
+                        M.push(M03)
+                    }
+                }
+                if (option3.includes('option3b')) {
+                    M.push(M01)
+                    if (option6.includes('option6a')) {
+                        M.push(M03)
+                    }
+                }
+                if (option3.includes('option3b1') && option6.includes('option6a')) {
+                    M.push(M03, M21)
+                }
+                if (option3.includes('option3a') && option6.includes('option6a')) {
+                    M.push(M07)
+                }
+                
+            }
+
+
+            
             
         
             if (option1.length === 0 && option2.length === 0 && option3.length === 0 && option4.length === 0 && option5.length === 0 && option6.length === 0) {
