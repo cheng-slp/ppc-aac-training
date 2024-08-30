@@ -259,26 +259,19 @@
             let P = []
             // option1
             if (option1.includes('option1f')) {
-                M.push(M02, M10, M20, M22)
+                M.push(M02, M20, M22)
                 S.push(S03, S11, S12)
                 P.push(P03, P05, P12)
             } 
             else if (option1.includes('option1d')) {
-                 M.push(M01, M02, M10, M22)
-                S.push(S05, S12)
-                P.push(P12)
+                M.push(M22)
+                S.push(S05)
             }  
-            else if (option1.includes('option1a') || option1.includes('option1b')) {
-                M.push(M01, M10)
-                S.push(S12)
-                P.push(P12)
+                      
+            if (option1.includes('option1c')) {
+                P.push(P01)
             }
             
-            if (option1.includes('option1c')) {
-                M.push(M01, M10)
-                S.push(S12)
-                P.push(P01, P12)
-            }
             //option2
             if (option2.includes('option2h')) {
                 M.push(M02, M22, M23)
