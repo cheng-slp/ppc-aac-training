@@ -296,33 +296,33 @@
             
             //option3
             if (option3.includes('option3g')) {
-                M.push(M22, M23, M01, M02, M10, M11, M17, M18)
-                S.push(S01, S02, S03, S06, S07, S11, S12)
-                P.push(P05, P12)
+                M.push(M22, M23, M17, M18)
+                S.push(S01, S02, S03, S06, S07, S07a, S11, S12)
+                P.push(P05)
                 if (option6.includes('option6a')) {
                     M.push(M03)
                 }
             }
             else if (option3.includes('option3d1') || option3.includes('option3e')) {
-                M.push(M22, M23, M01, M02, M10, M17)
-                S.push(S01, S02, S05, S06, S07, S11, S12)
-                P.push(P05, P12)
+                M.push(M22, M23, M17, M18)
+                S.push(S01, S02, S03, S06, S07, S07a, S11, S12)
+                P.push(P05)
             } 
             else if (option3.includes('option3f')) {
-                M.push(M22, M23, M01, M05, M10, M17)
-                S.push(S03)
-                P.push(P05, P07, P12)
+                M.push(M22, M23, M05, M17)
+                S.push(S01, S02, S03, S07, S07a)
+                P.push(P05, P07)
+                if (option6.includes('option6a')) {
+                    M.push(M03)
+                }
             } else {
                 if (option3.includes('option3c') || option3.includes('option3d')) {
-                    M.push(M01, M02, M10, M17, M22, M23)
-                    S.push(S01, S03, S06, S07, S12)
-                    P.push(P05, P12)
-                    if (option6.includes('option6a')) {
-                        M.push(M03)
-                    }
+                    M.push(M17, M22, M23)
+                    S.push(S01, S02, S03, S06, S07, S07a, S11, S12, S14)
+                    P.push(P05)
                 }
                 if (option3.includes('option3b')) {
-                    M.push(M01)
+                    M.push(M18)
                     if (option6.includes('option6a')) {
                         M.push(M03)
                     }
@@ -334,6 +334,20 @@
                     M.push(M07)
                 }
                 
+            }
+
+            //option4
+            if (option4.includes('option4a')) {
+                S.push(S08, S09)
+            }
+            
+            if (option4.includes('option4d')) {
+                M.push(M09)
+                P.push(P09)
+            }
+
+            if (option4.includes('option4e')) {
+                P.push(P08)
             }
 
 
