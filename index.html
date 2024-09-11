@@ -317,23 +317,25 @@
                     M.push(M03)
                 }
             } else {
-                if (option3.includes('option3c') || option3.includes('option3d')) {
+                if !(option3.includes('option3c') || option3.includes('option3d')) {
+                    if (option3.includes('option3b')) {
+                        M.push(M18)
+                        if (option6.includes('option6a')) {
+                            M.push(M03)
+                        }
+                    }
+                    if (option3.includes('option3b1') && option6.includes('option6a')) {
+                        M.push(M03, M21)
+                    }
+                    if (option3.includes('option3a') && option6.includes('option6a')) {
+                        M.push(M07)
+                    }      
+                }
+                else {
                     M.push(M17, M22, M23)
                     S.push(S01, S02, S03, S06, S07, S15, S11, S12, S14)
                     P.push(P05)
-                }
-                if (option3.includes('option3b')) {
-                    M.push(M18)
-                    if (option6.includes('option6a')) {
-                        M.push(M03)
-                    }
-                }
-                if (option3.includes('option3b1') && option6.includes('option6a')) {
-                    M.push(M03, M21)
-                }
-                if (option3.includes('option3a') && option6.includes('option6a')) {
-                    M.push(M07)
-                }     
+                }    
             }
 
             //option4
