@@ -333,44 +333,88 @@
             
             //option3
             if (option3.includes('option3g')) {
-                M.push(M22, M23, M17, M18)
+                M.push(M22, M18)
                 S.push(S01, S02, S03, S06, S07, S15, S11, S12)
                 P.push(P05)
-                if (option6.includes('option6a')) {
-                    M.push(M03)
+                if (option6.includes('option6a')) && (option5.includes('option5a')) {
+                    M.push(M03, M17, M23)
+                }
+                else if (option6.includes('option6b')) && (option5.includes('option5b')) {
+                    M.push(M13, M25)
+                }
+                else if (option5.includes('option5c')) {
+                    M.push(M19, M23)
                 }
             }
             else if (option3.includes('option3d1') || option3.includes('option3e')) {
-                M.push(M22, M23, M17, M18)
+                M.push(M22, M18)
                 S.push(S01, S02, S03, S06, S07, S15, S11, S12)
                 P.push(P05)
+                if (option5.includes('option5a')) {
+                    M.push(M17, M23)
+                }
+                else if (option5.includes('option5b')) {
+                    M.push(M25)
+                }
+                else if (option5.includes('option5c')) {
+                    M.push(M19, M23)
+                }
             } 
             else if (option3.includes('option3f')) {
-                M.push(M22, M23, M05, M17)
+                M.push(M22)
                 S.push(S01, S02, S03, S07, S15)
                 P.push(P05, P07)
-                if (option6.includes('option6a')) {
-                    M.push(M03)
+                if (option6.includes('option6a')) && (option5.includes('option5a')) {
+                    M.push(M03, M17, M23, M05)
+                }
+                else if (option6.includes('option6b')) && (option5.includes('option5b')) {
+                    M.push(M13, M25, M05)
+                }
+                else if (option5.includes('option5c')) {
+                    M.push(M19, M23)
                 }
             } else {
                 if (option3.includes('option3a') || option3.includes('option3b1') || option3.includes('option3b')) {
                     if (option3.includes('option3b')) {
                         M.push(M18)
-                        if (option6.includes('option6a')) {
+                        if (option6.includes('option6a')) && (option5.includes('option5a')) {
                             M.push(M03)
                         }
+                        else if (option6.includes('option6b')) && (option5.includes('option5b')) {
+                            M.push(M13)
+                        }
+                        else if (option5.includes('option5c')) {
+                            M.push(M19, M23, M22)
+                        }
                     }
-                    if (option3.includes('option3b1') && option6.includes('option6a')) {
-                        M.push(M03, M21)
+                    if (option3.includes('option3b1')) {
+                        if (option6.includes('option6a')) && (option5.includes('option5a')) {
+                            M.push(M03, M21)
+                        }
+                        else if (option6.includes('option6b')) && (option5.includes('option5b')) {
+                            M.push(M13, M21)
+                        }
+                        else if (option5.includes('option5c')) {
+                            M.push(M19, M23, M22, M21)
+                        }
                     }
-                    if (option3.includes('option3a') && option6.includes('option6a')) {
+                    if (option3.includes('option3a')) {
                         M.push(M07)
                     }      
                 }
                 else if (option3.includes('option3c') || option3.includes('option3d')) {
-                    M.push(M17, M22, M23)
+                    M.push(M22)
                     S.push(S01, S02, S03, S06, S07, S15, S11, S12, S14)
                     P.push(P05)
+                    if (option5.includes('option5a')) {
+                        M.push(M17, M23)
+                    }
+                    else if (option5.includes('option5b')) {
+                        M.push(M25)
+                    }
+                    else if (option5.includes('option5c')) {
+                        M.push(M19, M23)
+                    }
                 }    
             }
 
