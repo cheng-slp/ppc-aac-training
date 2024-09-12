@@ -113,7 +113,7 @@
         <h2>Language</h2>
         <div class="button" data-value="option5a">Speaks English</div>
         <div class="button" data-value="option5b">Limited English proficiency, speaks Spanish</div>
-        <div class="button" data-value="option5c">Speaks other languages</div>
+        <div class="button" data-value="option5c">Limited English and Spanish proficiency, speaks other languages</div>
         <div class="button" data-value="option5d">Stroke/Aphasia</div>
     </div>
 
@@ -265,9 +265,18 @@
             let P = []
             // option1
             if (option1.includes('option1f')) {
-                M.push(M02, M20, M22)
+                M.push(M20, M22)
                 S.push(S03, S11, S12, S07, S15)
                 P.push(P03, P05, P10, P11, P12)
+                if (option5.includes('option5a')){
+                    M.push(M02)
+                }
+                else if (option5.includes('option5b')){
+                    M.push(M26)
+                }
+                else if (option5.includes('option5c')){
+                    M.push(M19)
+                }
             } 
             else if (option1.includes('option1d')) {
                 S.push(S03)
@@ -279,20 +288,47 @@
             
             //option2
             if (option2.includes('option2h')) {
-                M.push(M02, M10, M11, M22, M23)
+                M.push(M10, M22)
                 S.push(S01, S02, S06, S07, S15, S11, S10, S12, S13)
                 P.push(P04, P05, P12)
+                if (option5.includes('option5a')){
+                    M.push(M02, M11, M23)
+                }
+                else if (option5.includes('option5b')){
+                    M.push(M26, M16, M25)
+                }
+                else if (option5.includes('option5c')){
+                    M.push(M19, M23)
+                }
             }
             else if (option2.includes('option2e')) {
-                M.push(M02, M10, M11, M22, M23)
+                M.push(M10, M22)
                 S.push(S01, S02, S06, S07, S15, S11, S12, S13)
                 P.push(P04, P05, P12)
+                if (option5.includes('option5a')){
+                    M.push(M02, M11, M23)
+                }
+                else if (option5.includes('option5b')){
+                    M.push(M26, M16, M25)
+                }
+                else if (option5.includes('option5c')){
+                    M.push(M19, M23)
+                }
 
             }
             else if (option2.includes('option2a')) {
-                M.push(M01, M10, M11)
+                M.push(M10, M22)
                 S.push(S15, S12)
                 P.push(P12)
+                if (option5.includes('option5a')){
+                    M.push(M01, M11)
+                }
+                else if (option5.includes('option5b')){
+                    M.push(M12, M16)
+                }
+                else if (option5.includes('option5c')){
+                    M.push(M19, M23)
+                }
             }
             
             //option3
