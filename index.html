@@ -373,7 +373,8 @@
                 else if (option5.includes('option5c')) {
                     M.push(M19, M23)
                 }
-            } else {
+            } 
+            else {
                 if (option3.includes('option3a') || option3.includes('option3b1') || option3.includes('option3b')) {
                     if (option3.includes('option3b')) {
                         M.push(M18)
@@ -435,7 +436,20 @@
                 M.push(M18)
                 S.push(S06, S07, S10, S11, S12, S15)
                 P.push(P05)
-            }    
+            } 
+            //option5b
+            if (option5.includes('option5b')) {
+                S.push(S06)
+                P.push(P05, P10, P11)
+            }
+            //option5c
+            if (option5.includes('option5c')) {
+                M.push(M19)
+                S.push(S06)
+                P.push(P05, P10, P11)
+            } 
+
+            
 
         
             if (option1.length === 0 && option2.length === 0 && option3.length === 0 && option4.length === 0 && option5.length === 0 && option6.length === 0) {
